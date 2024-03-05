@@ -8,7 +8,7 @@ mod text_template;
 fn main() {
     text_template::home::home_presentation();
 
-    'home:loop {
+    loop {
         text_template::home::home_options();
 
         let mut input = String::new();

@@ -66,8 +66,7 @@ fn get_description()-> String {
 fn get_confirmation()-> String {
   let mut confirmation = String::new();
   
-  'confirmation:loop {
-
+  loop {
     text_template::new_pass::confirmation();
 
     io::stdin()
@@ -75,8 +74,8 @@ fn get_confirmation()-> String {
     .expect("Failed to read imput");
 
     match confirmation.as_str() {
-      "y"| "Y" => save_data(),
-      "n" | "N" => edit_data(),
+      "y"| "Y" => {save_data();}
+      "n" | "N" => {edit_data();}
       "q" | "Q" => {println!("Exiting the program.");}
       _ => println!("Invalid imput")
     }
@@ -84,9 +83,12 @@ fn get_confirmation()-> String {
 }
 
 fn save_data() {
-  println!("saved")
+  println!("saved");
+
+  "Saved";
 }
 
 fn edit_data() {
-  println!("editting")
+  println!("editting");
+  "y";
 }

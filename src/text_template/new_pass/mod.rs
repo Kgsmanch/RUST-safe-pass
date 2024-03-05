@@ -51,5 +51,3 @@ pub fn confirmation() {
       Type n/N to Edit
       Type q/Q to Exit Program"))
 }
-
-
