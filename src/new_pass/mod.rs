@@ -1,9 +1,12 @@
 use crate::text_template;
 use std::io;
+use std::process;
+
+mod registry;
 
 pub fn new_pass() {
 
-  loop {
+  'root:loop {
     text_template::new_pass::name_tag();
     let tag:String = get_tag();
   
@@ -18,8 +21,11 @@ pub fn new_pass() {
   
     text_template::new_pass::show_result(&tag, &user, &pass, &description);
 
-    let confirmation: String = get_confirmation();
-
+    let result = get_confirmation();
+    if result == true {
+      let _save = registry::registry(&tag, &user, &pass, &description);
+      break 'root
+    };
   }
 }
 
@@ -63,7 +69,7 @@ fn get_description()-> String {
   description
 }
 
-fn get_confirmation()-> String {
+fn get_confirmation()->bool {
   let mut confirmation = String::new();
   
   loop {
@@ -73,22 +79,19 @@ fn get_confirmation()-> String {
     .read_line(&mut confirmation)
     .expect("Failed to read imput");
 
-    match confirmation.as_str() {
-      "y"| "Y" => {save_data();}
-      "n" | "N" => {edit_data();}
-      "q" | "Q" => {println!("Exiting the program.");}
-      _ => println!("Invalid imput")
+    let option = confirmation.trim().to_lowercase();
+
+    if option == "y" {
+      return true;
+    }
+
+    if option == "n" {
+      break false;
+    }
+
+    if option == "q" {
+      println!("Exiting program...");
+      process::exit(0);
     }
   }
-}
-
-fn save_data() {
-  println!("saved");
-
-  "Saved";
-}
-
-fn edit_data() {
-  println!("editting");
-  "y";
 }
