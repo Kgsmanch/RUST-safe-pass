@@ -25,18 +25,17 @@ fn main() {
                         3 => search_name::search_name(),
                         9 => {
                             println!("Exiting the program.");
-                            return; // Exit the program if input is 9
+                            return;
                         }
                         _ => {
                             println!("Input is not one of the options! Please try again.");
-                            continue; // Restart the loop for any other input
+                            continue;
                         }
                     }
-                    break;
                 }
                 Err(_) => {
                     println!("Input is not a number! Please try again.");
-                    continue; // Restart the loop if input is not a number
+                    continue;
                 }
             }
         }

@@ -24,7 +24,11 @@ pub fn new_pass() {
     let result = get_confirmation();
     if result == true {
       let _save = registry::registry(&tag, &user, &pass, &description);
-      break 'root
+
+      let continue_saving: bool = get_continue_confirmation();
+      if continue_saving == false{
+        break 'root
+      }
     };
   }
 }
@@ -93,5 +97,23 @@ fn get_confirmation()->bool {
       println!("Exiting program...");
       process::exit(0);
     }
+  }
+}
+
+fn get_continue_confirmation()->bool {
+  text_template::new_pass::confirmation_continue_saving();
+
+  let mut result: String = String::new();
+
+  io::stdin()
+    .read_line(&mut result)
+    .expect("Failed to read file");
+
+  let option: &str = &result.trim().to_lowercase();
+
+  match option {
+    "y" => return true,
+    "q" => {println!("Exiting program..."); process::exit(0)},
+    _ => return false,
   }
 }

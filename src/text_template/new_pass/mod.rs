@@ -51,3 +51,11 @@ pub fn confirmation() {
       Type n/N to Edit
       Type q/Q to Exit Program"))
 }
+
+pub fn confirmation_continue_saving() {
+  println!("{}",  Yellow.paint(
+    "Woud like to make another registry?:
+      Type y/Y to Continue
+      Type n/N to Back to Home
+      Type q/Q to Exit Program"))
+}
