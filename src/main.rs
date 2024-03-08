@@ -1,4 +1,5 @@
 use std::io;
+use std::process;
 
 mod new_pass;
 mod search_name;
@@ -23,10 +24,7 @@ fn main() {
                         1 => new_pass::new_pass(),
                         2 => index::index(),
                         3 => search_name::search_name(),
-                        9 => {
-                            println!("Exiting the program.");
-                            return;
-                        }
+                        9 => {println!("Exiting program..."); process::exit(0)},
                         _ => {
                             println!("Input is not one of the options! Please try again.");
                             continue;

@@ -8,3 +8,6 @@ Tag => e | Username => e | Password => e | Description=> e
 Tag => ali | Username => ali | Password => ali | Description=> ali
 Tag => teste | Username => teste | Password => test | Description=> teste
 Tag => jijij | Username => jijij | Password => jijij | Description=> jijij
+git checkoutTag => 1 | Username => 2 | Password => 3 | Description=> 4
+Tag => tagname | Username => username | Password => password | Description=> descr
+Tag => name | Username => user | Password => pass | Description=> desc
