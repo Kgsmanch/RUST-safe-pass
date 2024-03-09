@@ -1,13 +1,3 @@
-Tag => gitlab | Username => kgsmanch | Password => blablabla | Description=> senha do gitlab
-Tag => a | Username => a | Password => a | Description=> a
-Tag => b | Username => b | Password => b | Description=> b
-Tag => c | Username => c | Password => c | Description=> c
-Tag => d | Username => d | Password => d | Description=> d
-Tag => g | Username => g | Password => g | Description=> g
-Tag => e | Username => e | Password => e | Description=> e
-Tag => ali | Username => ali | Password => ali | Description=> ali
-Tag => teste | Username => teste | Password => test | Description=> teste
-Tag => jijij | Username => jijij | Password => jijij | Description=> jijij
-git checkoutTag => 1 | Username => 2 | Password => 3 | Description=> 4
-Tag => tagname | Username => username | Password => password | Description=> descr
 Tag => name | Username => user | Password => pass | Description=> desc
+Tag => name | Username => user | Password => pass | Description=> desc
+Tag => outro | Username => outro | Password => outro | Description=> outro

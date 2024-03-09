@@ -6,9 +6,10 @@ pub fn home_presentation() {
 }
 
 pub fn home_options() {
-  println!("[{}]Insert New Pass | [{}]Search Through Index | [{}]Search By Name | [{}]Quit Program", 
+  println!("[{}]Insert New Pass | [{}]Search Through Index | [{}]Search By Name | [{}]Delete Registry | [{}]Quit Program", 
   Red.paint("1"), 
   Red.paint("2"), 
-  Red.paint("3"), 
+  Red.paint("3"),
+  Red.paint("4"), 
   Red.paint("9"));
 }

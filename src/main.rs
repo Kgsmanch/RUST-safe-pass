@@ -4,6 +4,7 @@ use std::process;
 mod new_pass;
 mod search_name;
 mod index;
+mod delete;
 mod text_template;
 
 fn main() {
@@ -24,6 +25,7 @@ fn main() {
                         1 => new_pass::new_pass(),
                         2 => index::index(),
                         3 => search_name::search_name(),
+                        4 => delete::delete(),
                         9 => {println!("Exiting program..."); process::exit(0)},
                         _ => {
                             println!("Input is not one of the options! Please try again.");
